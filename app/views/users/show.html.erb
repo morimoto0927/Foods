@@ -1,1 +1,7 @@
 <%= @user.username %>
+<div class="user-follow">
+ <%= render 'follow_form' %>
+</div>
+ <%= render 'nav' %>
+<%= link_to"ログアウト",destroy_user_session_path, method: :delete %>
+
