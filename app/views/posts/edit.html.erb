@@ -1,0 +1,15 @@
+<span><%= current_user.username %></span>
+<%= form_with model: @post, local: true do |f| %>
+ <p><%= f.label :title %><br>
+ <%= f.text_field :title, :placeholder =>"#{@post.title}" %>
+ </p>
+
+ <p><%= f.label :address %><br>
+ <%= f.text_field :address, :placeholder =>"#{@post.address}" %>
+ </p>
+
+ <p><%= f.label :body %><br>
+ <%= f.text_area :body, :placeholder =>"#{@post.body}" %>
+ </p>
+ <div><%= f.submit "更新する" %></div>
+<% end %>

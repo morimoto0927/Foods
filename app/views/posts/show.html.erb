@@ -1,0 +1,11 @@
+<h1>投稿一覧<h1>
+<% @posts.each do |post| %>
+ <p>タイトル</p>
+ <span><%= post.title %></span>
+ <p>住所</p>
+ <span><%= post.address %></span>
+ <p>レビュー</p>
+ <span><%= post.body %></span>
+ <%= link_to "編集", edit_post_path(post) %>
+ <%= link_to "削除", post_path(post), method: :delete %>
+<% end %> 
