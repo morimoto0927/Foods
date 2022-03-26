@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    before_action :authenticate_user!, only: [:show, :create]
     def index
         @posts = Post.all
     end
@@ -6,6 +7,8 @@ class PostsController < ApplicationController
     def show
         @post = Post.find_by(params[:id])
         @posts = Post.all
+        @comments = @post.comments.includes(:user).all
+        @comment = @post.comments.build(user_id: current_user.id) if current_user
     end
 
     def new 
