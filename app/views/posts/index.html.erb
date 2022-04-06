@@ -1,0 +1,19 @@
+<div class="posts-index">
+ <div class="container">
+  <div class="posts-item-box">
+    <% @posts.each do |post| %>
+    <%= link_to post do %>
+    <div class="post-body">
+     <div class="post-title">
+      <%= post.title %>
+     </div>
+     <% end %>
+     <div class="post-menu">
+       <%= link_to post.user.username, user_path(post.user.id), class:'post-user' %>
+     <%= post.comments.count %>
+     </div>
+    </div>
+    <% end %>
+  </div>
+ </div>
+</div>
