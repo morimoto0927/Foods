@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
   has_many :followers, through: :follower_relationships
   has_many :comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   attr_writer :login
   
   
@@ -44,5 +45,9 @@ class User < ApplicationRecord
 
   def unfollow!(other_user)
     following_relationships.find_by(following_id: other_user.id).destroy
+  end
+
+  def favorited?(post)
+    favorites.exists?(post_id: post.id)
   end
 end

@@ -21,6 +21,7 @@
       <%= link_to "削除", post_path(@post), method: :delete %>
     </div>
     <% end %>
+    <%= render 'posts/favorite' %>
     <div class="comment-form">
       <%= render 'posts/comment' %>
       <%= render 'posts/comment_form' %>
