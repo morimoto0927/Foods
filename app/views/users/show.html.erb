@@ -1,3 +1,8 @@
+<div class="admin-login">
+ <% if current_user.try(:admin?) %>
+   <%= link_to '管理者ログイン', rails_admin_path %>
+ <% end %>
+</div>
 <%= @user.username %>
 <div class="user-follow">
  <%= render 'follow_form' %>
