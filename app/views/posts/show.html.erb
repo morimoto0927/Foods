@@ -15,13 +15,16 @@
     <p>レビュー</p>
     <h2><%= @post.body %>
     </div>
+    <%= image_tag attachment_url(@post, :image, :fill, 350, 250, format: "jpg") %>
     <% if @post.user_id == current_user.id %>
     <div class="post-change">
       <%= link_to "編集", edit_post_path(@post) %>
       <%= link_to "削除", post_path(@post), method: :delete %>
     </div>
     <% end %>
-    <%= render 'posts/favorite' %>
+    <div class="favorite">
+      <%= render 'posts/favorite' %>
+    </div>
     <div class="comment-form">
       <%= render 'posts/comment' %>
       <%= render 'posts/comment_form' %>

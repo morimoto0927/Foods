@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'cancancan'
 gem 'rails_admin', '~> 2.0.0.beta'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
