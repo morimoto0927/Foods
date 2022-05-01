@@ -12,6 +12,7 @@
        <%= link_to post.user.username, user_path(post.user.id), class:'post-user' %>
      <%= post.comments.count %>
      </div>
+     <%= render 'posts/tag_list', tag_list: post.tag_list %>
     </div>
     <% end %>
   </div>
