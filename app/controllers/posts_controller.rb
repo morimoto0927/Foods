@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
     before_action :authenticate_user!, only: [:show, :create]
+    before_action :set_q, only: [:index, :search]
     def index
         @posts = Post.order(created_at: :desc).page(params[:page]).per(10)
     end
@@ -42,8 +43,16 @@ class PostsController < ApplicationController
         redirect_to post_path(@post)
     end
 
+    def search
+        @results = @q.result
+    end
+
     private
     def post_params
         params.require(:post).permit(:title, :address, :body, :image, :tag_list)
+    end
+
+    def set_q
+        @q = Post.ransack(params[:q])
     end
 end

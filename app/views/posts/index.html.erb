@@ -1,6 +1,12 @@
 <div class="posts-index">
  <div class="container">
   <div class="posts-item-box">
+    <%= search_form_for @q, url: search_posts_path do |f| %>
+      <%= f.label :address_cont, '住所' %>
+      <%= f.search_field :address_cont %>
+      <br>
+      <%= f.submit '検索' %>
+    <% end %>
     <% @posts.each do |post| %>
     <%= link_to post do %>
     <div class="post-body">
