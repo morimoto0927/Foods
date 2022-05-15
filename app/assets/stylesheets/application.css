@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+    padding-top: 3rem
+ }
+
+ .no-underline{
+    padding-right: 10px;
+    text-decoration:none !important;
+    color: white;
+    }
+
+  .top-container {
+    background-image: url("/images/store.jpeg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding-top: 200px;
+  }
+
+   .top-container p {
+        font-size: 35px;
+    }
+
+    .top-container h1 {
+        font-size: 55px;
+    }
+    
+  .top-container .btn {
+    position: absolute;
+    text-align:center;
+    width: 200px;
+    top: 60%;
+    left: 40%;
+    font-size: 150%;
+  }
+  
+  .display-5 {
+    padding-top: 20px;
+  }
