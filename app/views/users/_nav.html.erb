@@ -1,7 +1,8 @@
-<a href="<%= followings_user_user_path(@user) %>">
- <p><%= @user.followings.count %>フォロー中</p>
-</a>
-<a href="<%= followers_user_user_path(@user) %>">
- <p><%= @user.followers.count %>フォロワー</p>
-</a>
-
+<div class="nav">
+  <a href="<%= followings_user_user_path(@user) %>">
+    <p><%= @user.followings.count %>フォロー中</p>
+  </a>
+  <a href="<%= followers_user_user_path(@user) %>">
+    <p><%= @user.followers.count %>フォロワー</p>
+  </a>
+</div>

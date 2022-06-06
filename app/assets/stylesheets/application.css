@@ -15,7 +15,7 @@
  */
 
  body{
-    padding-top: 3rem
+    padding-top: 2.5rem
  }
 
  .no-underline{
@@ -124,3 +124,105 @@
     text-decoration: none;
     margin-top: 10px;
   }
+
+  .user-index {
+    text-align: center;
+    width: 75%;
+    border:1px solid gray; padding:5px; margin:5px; 
+    margin: 30px auto;
+  }
+
+  .user-name {
+    font-size: 30px;
+  }
+
+  
+
+  .post-container {
+    width: 100%;
+  }
+
+  .tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .tab_item {
+    width: calc(100%/2);
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+
+  input[name="tab_item"] {
+    display: none;
+  }
+
+  .tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+
+  #post-all:checked ~ #all_content,
+  #post-favorites:checked ~ #favorites_content{
+    display: block;
+  }
+
+  .tabs input:checked + .tab_item {
+    background-color: #5ab4bd;
+    color: #fff;
+  }
+
+
+  .post-title {
+    background-color:white; display: block;
+    border:1px solid gray; padding:5px; margin:5px; 
+    width: 70%; 
+    height: 100px;
+    margin: 0 auto;
+   }
+
+   .paginate {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+   }
+
+
+  .nav {
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .nav a {
+    padding:  10px; 
+    margin:  0 auto;
+    text-decoration: none; 
+    
+  }
+
+  .nav p {
+    background-color: white; 
+    color: black;
+  }
+

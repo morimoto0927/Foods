@@ -1,12 +1,39 @@
-<div class="admin-login">
- <% if current_user.try(:admin?) %>
-   <%= link_to '管理者ログイン', rails_admin_path %>
- <% end %>
+<div class="user-index">
+  <div class="user-name">  
+    <%= @user.username %>
+  </div>
+  <div class="user-follow">
+    <%= render 'follow_form' %>
+    <%= render 'nav' %>
+  </div>
 </div>
-<%= @user.username %>
-<div class="user-follow">
- <%= render 'follow_form' %>
-</div>
- <%= render 'nav' %>
-<%= link_to"ログアウト",destroy_user_session_path, method: :delete %>
 
+<div class="tabs">
+<input id="post-all" type="radio" name="tab_item" checked>
+<label class="tab_item" for="post-all">投稿一覧</label>
+<input id="post-favorites" type="radio" name="tab_item">
+<label class="tab_item" for="post-favorites">お気に入り</label>
+<div class="tab_content" id="all_content">
+<div class="post-container">
+<% @posts.each do |post| %>
+  <%= link_to post do %>
+  <div class="post-title">  
+    <%= post.title %>
+  </div>
+  <% end %>
+<% end %>
+<div class="paginate"><%= paginate @posts %></div>
+</div>
+</div>
+<div class="tab_content" id="favorites_content">
+<div class="post-container">
+<% @favorite_list.each do |post| %>
+<%= link_to post do %>
+<div class="post-title"> 
+<%= post.title %>
+</div>
+<% end %>
+<% end %>
+</div>
+</div>
+</div>
