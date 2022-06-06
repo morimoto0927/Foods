@@ -1,0 +1,6 @@
+<h1>いいね一覧</h1>
+<% @favorite_posts.each do |post|%>
+<%= link_to post do %>
+<%=post.title %>
+<% end %>
+<% end %>
