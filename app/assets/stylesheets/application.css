@@ -226,3 +226,29 @@
     color: black;
   }
 
+  .user-back {
+    font-size: 30px;
+    text-decoration:none !important;
+    color: black;
+  }
+
+  .user-container {
+    display:flex;
+  }
+
+  .user-follow h2 {
+    text-align: center;
+  }
+
+  .user-menu {
+    background-color:white; display:block;
+    border:1px solid gray; padding:5px; margin: 0 10px;
+    font-size: 30px;
+  }
+
+  .follow-name {
+    padding-right: 10px;
+    text-decoration:none !important;
+    color: black;
+  }
+  

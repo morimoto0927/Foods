@@ -1,5 +1,17 @@
+<div class="user-container">
+<div><%= link_to '←', user_path(@user), class: 'user-back' %></div>
+<div class="user-name">  
+  <%= @user.username %>
+</div>
+</div>
+<div class="user-follow">
+<h2>フォロー中</h2>
+<hr width="100%">
+</div>
+<div class="follow">
 <% @user.followings.each do |user| %>
  <div class="user-menu">
- <p><%= link_to user.username, user_path(user.id), class: 'user-name' %></p>
+ <p><%= link_to user.username, user_path(user.id), class: 'follow-name' %></p>
  </div>
 <% end %>
+</div>
