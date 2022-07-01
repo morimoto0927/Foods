@@ -1,10 +1,15 @@
-<h3>コメント<%= @post.comments.count %></h3>
+<div class="comment">
 <% @comments.each do |comment| %>
- <%= link_to comment.user.username, user_path(comment.user.id) %>
-  <% if comment.user_id == current_user.id %>
-   <%= link_to '削除', post_comment_path(comment.post.id, comment.id), method: :delete %>
-  <% end %>
-  <div class="comment-content">
-   <%= simple_format comment.comment %>
-  </div>
+ <div class="comment-index">
+ <%= link_to comment.user.username, user_path(comment.user.id), data: {"turbolinks" => false}, class: 'comment-user' %>
+   <% if comment.user_id == current_user.id %>
+     <%= link_to post_comment_path(comment.post.id, comment.id), data: {"turbolinks" => false}, class: "btn-trash", method: :delete do %>
+     <i class="far fa-trash-alt"></i>
+     <% end %>
+   <% end %>
+   <div class="comment-content">
+     <%= simple_format comment.comment %>
+   </div>
+ </div>
 <% end %>
+</div>

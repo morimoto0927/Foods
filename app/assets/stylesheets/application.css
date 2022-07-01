@@ -14,15 +14,15 @@
  *= require_self
  */
 
- body{
+  body{
     padding-top: 2.5rem
- }
+  }
 
- .no-underline{
+  .no-underline{
     padding-right: 10px;
     text-decoration:none !important;
     color: white;
-    }
+  }
 
   .top-container {
     background-image: url("/images/store.jpeg");
@@ -34,13 +34,13 @@
     padding-top: 200px;
   }
 
-   .top-container p {
-        font-size: 35px;
-    }
+  .top-container p {
+    font-size: 35px;
+  }
 
-    .top-container h1 {
-        font-size: 55px;
-    }
+  .top-container h1 {
+    font-size: 55px;
+  }
     
   .top-container .btn {
     position: absolute;
@@ -140,7 +140,7 @@
 
   .post-container {
     width: 100%;
-  }
+    }
 
   .tabs {
     margin-top: 50px;
@@ -199,6 +199,15 @@
     width: 70%; 
     height: 100px;
     margin: 0 auto;
+    color: black;
+  }
+
+  .post-title:hover {
+    background-color: rgb(206, 206, 206);
+  }
+
+   .post-underline {
+    text-decoration: none;
    }
 
    .paginate {
@@ -252,3 +261,195 @@
     color: black;
   }
   
+  .post-new {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -120px;
+    position:relative
+  }
+
+  .post-edit {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative
+  }
+
+  .contact-table {
+    width: 90%;
+    margin-bottom: 20px;
+    margin-left: 5%;
+  }
+
+  .contact-item,
+  .contact-body {
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .contact-item {
+    text-align: left;
+    width: 30%;
+    background-color: #eee;
+  }
+
+  .contact-body {
+    width: 60%;
+  }
+  
+  .post-btn {
+    padding-bottom: 40px;
+    position: absolute;
+    top: 105%;
+    left: 45%;
+  }
+
+  .post-edit-btn {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .post-index {
+    padding-top: 40px;
+  }
+
+
+  .favorite {
+    width: 90%;
+    padding-bottom: 20px;
+  }
+
+  .favorite-index {
+    margin-left: auto;
+    width:200px;
+    height:60px;
+    background:rgb(248, 242, 205);
+    border:1px solid rgb(201, 189, 173);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .favorite p {
+    padding-top: 15px;
+    font-size: 20px;
+  }
+
+  .btn-position{
+    margin: auto;
+  }
+
+  .comment-index {
+    width: 80%;
+    background:rgb(250, 250, 250);
+    border:1px solid gray; padding:5px; margin:5px; 
+    margin: auto;
+    position:relative
+  }
+
+  .comment-user {
+    text-decoration:none !important;
+    color:black;
+    font-size: 20px;
+  }
+
+  .comment-new {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .comment-btn {
+    display       : inline-block;
+    border-radius : 20%;         
+    font-size     : 15px;      
+    text-align    : center;      
+    cursor        : pointer;    
+    padding       : 10px 15px;  
+    background    : #5656fd;    
+    color         : #ffffff;     
+    line-height   : 1em;        
+    transition    : .3s;         
+    border        : 2px solid #5656fd; 
+  }
+
+  .btn-trash {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .search {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .post-username {
+    position:relative;
+    padding-top: 10px;
+  }
+
+  .post-body {
+    color:black;
+    position:relative;
+    border:1px solid gray; padding:5px; margin:5px; 
+  }
+
+  .post-body:hover {
+    background-color: rgb(206, 206, 206);
+  }
+
+  .underline {
+    font-size: 20px;
+    text-decoration:none !important;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .post-body p {
+    color: black;
+  }
+
+  .post-body-container {
+    margin-top: 10px;
+  }
+
+  .tag {
+    display: inline-block;
+    margin: 0 .1em .1em 0;
+    padding: .2em;
+    line-height: 1;
+    text-decoration: none;
+    color: #0000ee;
+    background-color: #fff;
+    border: 1px solid #0000ee;
+  }
+
+  .post-user {
+    border:1px solid gray; border:1px solid gray; padding:5px; margin:5px; 
+    width: 40%;
+    color: black;
+    text-decoration:none !important;
+  }
+
+  .post-user:hover {
+    color:#565656;
+  }
+  
+  .text-position {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  .post-search {
+    margin: auto;
+    font-size: 25px;
+  }
+ 

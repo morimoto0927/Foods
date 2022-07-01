@@ -6,6 +6,7 @@
     <%= render 'follow_form' %>
     <%= render 'nav' %>
   </div>
+  <%= link_to "新規投稿", new_post_path, class: "btn btn-primary" %>
 </div>
 
 <div class="tabs">
@@ -16,9 +17,9 @@
 <div class="tab_content" id="all_content">
 <div class="post-container">
 <% @posts.each do |post| %>
-  <%= link_to post do %>
+  <%= link_to post, class: 'post-underline' do %>
   <div class="post-title">  
-    <%= post.title %>
+    <%= post.title%>
   </div>
   <% end %>
 <% end %>
@@ -28,7 +29,7 @@
 <div class="tab_content" id="favorites_content">
 <div class="post-container">
 <% @favorite_list.each do |post| %>
-<%= link_to post do %>
+<%= link_to post, class: 'post-underline' do %>
 <div class="post-title"> 
 <%= post.title %>
 </div>

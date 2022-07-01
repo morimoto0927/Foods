@@ -1,20 +1,27 @@
-<h1>検索結果</h1>
-<table>
+<h1 class="text-position">検索結果</h1>
+<table class="post-search">
   <thead>
     <tr>
+      <th>店名</th>
+      <th>メニュー</th>
       <th>住所</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @results.each do |post| %>
-      <tr>
+      <tr class="post-body">
+        <td><%= post.title %></td>
+        <td><%= post.menu %></td>
         <td><%= post.address %></td>
-        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to '', post, data: {"turbolinks" => false}, class: 'underline' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Top', posts_path %>
+<h3 class="text-position">
+  <%= link_to '投稿一覧', posts_path, data: {"turbolinks" => false}, class: 'user-back' %>
+</h3>
