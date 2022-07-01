@@ -1,6 +1,8 @@
 <% if @post.user_id != current_user.id %>
  <%= form_with model: [@post, @comment] do |f| %>
    <%= f.text_area :comment %>
-   <%= f.submit '送信', class: "btn-primary" %>
+   <div class="comment-form">
+   <%= f.submit '送信', class: "comment-btn" %>
+   </div>
  <% end %>
 <% end %>

@@ -1,15 +1,31 @@
-<span><%= current_user.username %></span>
 <%= form_with model: @post, local: true do |f| %>
- <p><%= f.label :title %><br>
- <%= f.text_field :title, :placeholder =>"#{@post.title}" %>
- </p>
+<div class="post-edit">
+<table class="contact-table">
+  <tr>
+  <th class="contact-item"><%= f.label "店名" %></th>
+  <td class="contact-body"><%= f.text_field :title, :placeholder =>"#{@post.title}" %></td><br>
+  </tr>
 
- <p><%= f.label :address %><br>
- <%= f.text_field :address, :placeholder =>"#{@post.address}" %>
- </p>
+  <tr>
+  <th class=contact-item><%= f.label "メニュー" %></th>
+  <td class="contact-body"><%= f.text_field :menu, :placeholder =>"#{@post.menu}" %></td><br>
+  </tr>
 
- <p><%= f.label :body %><br>
- <%= f.text_area :body, :placeholder =>"#{@post.body}" %>
- </p>
- <div><%= f.submit "更新する" %></div>
+  <tr>
+  <th class=contact-item><%= f.label "金額" %></th>
+  <td class="contact-body"><%= f.text_field :price, :placeholder =>"#{@post.price}" %></td><br>
+  </tr>
+
+  <tr>
+  <th class=contact-item><%= f.label "住所" %></th>
+  <td class="contact-body"><%= f.text_field :address, :placeholder =>"#{@post.address}" %></td><br>
+  </tr>
+
+  <tr>
+  <th class=contact-item><%= f.label "レビュー" %></th>
+  <td class="contact-body"><%= f.text_area :body, :placeholder =>"#{@post.body}" %></td><br>
+  </tr>
+  </table>
+  </div>
+ <p class="post-edit-btn"><%= f.submit "更新する" %></p>
 <% end %>

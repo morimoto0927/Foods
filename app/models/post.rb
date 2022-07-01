@@ -7,4 +7,6 @@ class Post < ApplicationRecord
     validates :user_id, presence: true
     validates :title, presence: true
     validates :body, presence: true
+    validates :menu, presence: true
+    validates :address, presence: true
 end

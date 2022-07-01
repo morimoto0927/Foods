@@ -1,35 +1,60 @@
 <div class="post-index">
   <div class="container">
-    <div class="post-show-user">
-      
+    <div class="favorite">
+    <div class="favorite-index">
+      <p>お気に入り<%= render 'posts/favorite' %></p>
     </div>
-    <div class="post-show-title">
-    <p>タイトル</p>
-    <h2><%= @post.title %>
     </div>
-    <div class="post-show-address">
-    <p>住所</p>
-    <h2><%= @post.address %>
-    </div>
-    <div class="post-show-body">
-    <p>レビュー</p>
-    <h2><%= @post.body %>
-    </div>
+    <table class="contact-table">
+    <tr>
+    <th class=contact-item>店名</th>
+    <td class="contact-body"><%= @post.title %></td>
+    </tr>
+    
+    <tr>
+    <th class=contact-item>メニュー</th>
+    <td class="contact-body"><%= @post.menu %></td>
+    </tr>
+    
+    <tr>
+    <th class=contact-item>金額</th>
+    <td class="contact-body"><%= @post.price %></td>
+    </tr>
+
+    <tr>
+    <th class=contact-item>住所</th>
+    <td class="contact-body"><%= @post.address %></td>
+    </tr>
+
+    <tr>
+    <th class=contact-item>写真</th>
+    <td class="contact-body">
     <% if @post.image_id.present? %>
       <%= image_tag attachment_url(@post, :image, :fill, 350, 250, format: "jpg") %>
     <% end %>
+    </td>
+    </tr>
+    <tr>
+    <th class=contact-item>レビュー</th>
+    <td class="contact-body">
+      <%= @post.body %>
+    </td>
+    </tr>
+    </table>
     <% if @post.user_id == current_user.id %>
-    <div class="post-change">
-      <%= link_to "編集", edit_post_path(@post) %>
-      <%= link_to "削除", post_path(@post), method: :delete %>
-    </div>
-    <% end %>
-    <div class="favorite">
-      <%= render 'posts/favorite' %>
-    </div>
+    <table class="btn-position">
+    <tr>
+    <td><%= link_to "編集", edit_post_path(@post), data: {"turbolinks" => false}, class: "btn btn-primary btn-block" %></td>
+    <td><%= link_to "削除", post_path(@post), data: {"turbolinks" => false}, class: "btn btn-primary btn-block", method: :delete %></td>
+    </tr>
+    </table>
+    <% end %><hr>
+    <h3>コメント<%= @post.comments.count %></h3>
     <div class="comment-form">
       <%= render 'posts/comment' %>
+      <div class="comment-new">
       <%= render 'posts/comment_form' %>
+      </div>
     </div>
   </div>
 </div>

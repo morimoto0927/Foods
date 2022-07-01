@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
     before_action :authenticate_user!, only: [:show, :create]
     before_action :set_q, only: [:index, :search]
+    before_action :find_post, only: [:show, :edit, :update, :destroy]
     def index
         @posts = Post.order(created_at: :desc).page(params[:page]).per(10)
     end
 
     def show
-        @post = Post.find(params[:id])
         @user = User.find_by(id: @post.user_id)
         @posts = Post.all
         @comments = @post.comments.includes(:user).all
@@ -20,16 +20,18 @@ class PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
         @post.user_id = current_user.id
-        @post.save
-        redirect_to '/posts/new'
+        if @post.save
+          redirect_to posts_path, notice: "投稿しました"
+        else
+          redirect_to new_post_path, alert: "入力必須項目が抜けています。"
+        end
     end
 
     def edit
-        @post = Post.find(params[:id])
+   
     end
     
     def update
-        @post = Post.find(params[:id])
         if @post.update(post_params)
             redirect_to post_path(@post)
         else 
@@ -38,9 +40,8 @@ class PostsController < ApplicationController
     end
 
     def destroy
-        @post = Post.find(params[:id])
         @post.destroy
-        redirect_to post_path(@post)
+        redirect_to posts_path
     end
 
     def search
@@ -49,10 +50,14 @@ class PostsController < ApplicationController
 
     private
     def post_params
-        params.require(:post).permit(:title, :address, :body, :image, :tag_list)
+        params.require(:post).permit(:title, :menu, :price, :address, :body, :image, :tag_list)
     end
 
     def set_q
         @q = Post.ransack(params[:q])
+    end
+
+    def find_post
+        @post = Post.find(params[:id])
     end
 end
