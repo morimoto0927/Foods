@@ -14,8 +14,9 @@
  *= require_self
  */
 
+
   body{
-    padding-top: 2.5rem
+    padding-top: 3rem
   }
 
   .no-underline{
@@ -206,7 +207,7 @@
     background-color: rgb(206, 206, 206);
   }
 
-   .post-underline {
+   .post-underline:hover {
     text-decoration: none;
    }
 

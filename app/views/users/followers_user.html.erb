@@ -1,5 +1,5 @@
 <div class="user-container">
-<div><%= link_to '←', user_path(@user), class: 'user-back' %></div>
+<div><%= link_to '←', user_path(@user), data: {"turbolinks" => false}, class: 'user-back' %></div>
 <div class="user-name">  
   <%= @user.username %>
 </div>
@@ -11,7 +11,7 @@
 <div class="follow">
 <% @user.followers.each do |user| %>
  <div class="user-menu">
- <p><%= link_to user.username, user_path(user.id), class: 'follow-name' %></p>
+ <p><%= link_to user.username, user_path(user.id), data: {"turbolinks" => false}, class: 'follow-name' %></p>
  </div>
 <% end %>
 </div>
