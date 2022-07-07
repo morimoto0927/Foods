@@ -14,9 +14,10 @@
  *= require_self
  */
 
-
   body{
-    padding-top: 3rem
+    padding-top: 3rem;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .no-underline{
@@ -44,11 +45,22 @@
   }
     
   .top-container .btn {
-    position: absolute;
-    width: 200px;
-    top: 60%;
-    left: 40%;
-    font-size: 150%;
+    font-size: 25px;
+  }
+
+  @media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .top-container p {
+      font-size: 28px;
+    }
+
+    .top-container h1 {
+      font-size: 45px;
+    }
+
+    .top-container .btn {
+      font-size: 20px;
+    }
   }
   
   .display-5 {
@@ -126,11 +138,43 @@
     margin-top: 10px;
   }
 
+  @media screen and (max-width: 480px) {
+    .container-login {
+      width: 300px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid rgb(8, 169, 190);
+      box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
+      border-radius:  20px;
+    }
+
+    .login {
+      font-size: 20px;
+    }
+
+    input[type="text"] {
+      width: 200px;
+      height: 28px;
+    }
+  
+    input[type="email"] {
+      width: 200px;
+      height: 28px;
+    }
+    
+    input[type="password"] {
+      width: 200px;
+      height: 28px;
+    }
+  }
+
   .user-index {
     text-align: center;
-    width: 75%;
+    width: 80%;
     border:1px solid gray; padding:5px; margin:5px; 
-    margin: 30px auto;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
 
   .user-name {
@@ -148,7 +192,7 @@
     padding-bottom: 40px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 700px;
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -218,6 +262,12 @@
     padding-bottom: 20px;
    }
 
+   @media screen and (max-width: 480px) {
+    .post-title {
+      width: 90%; 
+    }
+   }
+
 
   .nav {
     margin-left: auto;
@@ -264,23 +314,21 @@
   
   .post-new {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     margin-top: -120px;
     position:relative
   }
 
   .post-edit {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     position:relative
   }
 
   .contact-table {
-    width: 90%;
+    margin: auto;
+    width: 80%;
     margin-bottom: 20px;
-    margin-left: 5%;
   }
 
   .contact-item,
@@ -296,7 +344,7 @@
   }
 
   .contact-body {
-    width: 60%;
+    width: 50%;
   }
   
   .post-btn {
@@ -304,6 +352,35 @@
     position: absolute;
     top: 105%;
     left: 45%;
+  }
+
+  @media screen and (max-width: 480px){
+   .post-new {
+      width: 100%;
+    }
+
+    .contact-table th,
+    .contact-table td {
+      margin: auto;
+      display: block;
+      width: 100%;
+    }
+
+    .contact-item {
+      font-size: 15px;
+    }
+
+    .contact-body {
+      font-size: 12px;
+    }
+
+    .post-btn {
+      padding-bottom: 40px;
+      position: absolute;
+      top: 105%;
+      left: 40%;
+    }
+
   }
 
   .post-edit-btn {
