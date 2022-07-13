@@ -1,43 +1,42 @@
 <%= render '/layouts/flash_messages' %>
 <%= form_with model: @post, local: true do |f| %>
-<div class="post-new">
-<table class="contact-table">
+  <div class="post-new">
+    <table class="contact-table">
+      <tr>
+      <th class=contact-item><%= f.label "店名(必須)" %></th>
+      <td class="contact-body"><%= f.text_field :title %></td><br>
+      </tr>
 
-<tr>
-<th class=contact-item><%= f.label "店名(必須)" %></th>
-<td class="contact-body"><%= f.text_field :title %></td><br>
-</tr>
+      <tr>
+      <th class=contact-item><%= f.label "メニュー(必須)" %></th>
+      <td class="contact-body"><%= f.text_field :menu %></td><br>
+      </tr>
 
-<tr>
-<th class=contact-item><%= f.label "メニュー(必須)" %></th>
-<td class="contact-body"><%= f.text_field :menu %></td><br>
-</tr>
+      <tr>
+      <th class=contact-item><%= f.label "金額" %></th>
+      <td class="contact-body"><%= f.text_field :price %></td><br>
+      </tr>
 
-<tr>
-<th class=contact-item><%= f.label "金額" %></th>
-<td class="contact-body"><%= f.text_field :price %></td><br>
-</tr>
+      <tr>
+      <th class=contact-item><%= f.label "住所(必須)" %></th>
+      <td class="contact-body"><%= f.text_field :address %></td><br>
+      </tr>
 
-<tr>
-<th class=contact-item><%= f.label "住所(必須)" %></th>
-<td class="contact-body"><%= f.text_field :address %></td><br>
-</tr>
+      <tr>
+      <th class=contact-item><%= f.label "レビュー(必須)" %></th>
+      <td class="contact-body"><%= f.text_area :body %></td><br>
+      </tr>
 
-<tr>
-<th class=contact-item><%= f.label "レビュー(必須)" %></th>
-<td class="contact-body"><%= f.text_area :body %></td><br>
-</tr>
+      <tr>
+      <th class=contact-item><%= f.label "タグ" %></th>
+      <td class="contact-body"><%= f.text_field :tag_list, value: @post.tag_list.join(',') %></td><br>
+      </tr>
 
-<tr>
-<th class=contact-item><%= f.label "タグ" %></th>
-<td class="contact-body"><%= f.text_field :tag_list, value: @post.tag_list.join(',') %></td><br>
-</tr>
-
-<tr>
-<th class=contact-item><%= f.label "写真" %></th>
-<td class="contact-body"><%= f.attachment_field :image %></td><br>
-</tr>
-</table>
-<p class="post-btn"><%= f.submit '投稿する' %></p>
-</div>
+      <tr>
+      <th class=contact-item><%= f.label "写真" %></th>
+      <td class="contact-body"><%= f.attachment_field :image %></td><br>
+      </tr>
+    </table>
+    <p class="post-btn"><%= f.submit '投稿する' %></p>
+  </div>
 <% end %>

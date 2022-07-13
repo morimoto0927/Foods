@@ -1,15 +1,15 @@
 <div class="comment">
-<% @comments.each do |comment| %>
- <div class="comment-index">
- <%= link_to comment.user.username, user_path(comment.user.id), data: {"turbolinks" => false}, class: 'comment-user' %>
-   <% if comment.user_id == current_user.id %>
-     <%= link_to post_comment_path(comment.post.id, comment.id), data: {"turbolinks" => false}, class: "btn-trash", method: :delete do %>
-     <i class="far fa-trash-alt"></i>
-     <% end %>
-   <% end %>
-   <div class="comment-content">
-     <%= simple_format comment.comment %>
-   </div>
- </div>
-<% end %>
+  <% @comments.each do |comment| %>
+    <div class="comment-index">
+    <%= link_to comment.user.username, user_path(comment.user.id), data: {"turbolinks" => false}, class: 'comment-user' %>
+      <% if comment.user_id == current_user.id %>
+      <%= link_to post_comment_path(comment.post.id, comment.id), data: {"turbolinks" => false}, class: "btn-trash", method: :delete do %>
+      <i class="far fa-trash-alt"></i>
+      <% end %>
+    <% end %>
+    <div class="comment-content">
+      <%= simple_format comment.comment %>
+    </div>
+    </div>
+  <% end %>
 </div>
