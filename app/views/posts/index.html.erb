@@ -1,29 +1,29 @@
 <div class="posts-index">
- <div class="container">
-  <div class="posts-item-box">
-    <div class="search">
-    <%= search_form_for @q, url: search_posts_path do |f| %>
-      <%= f.label :address_cont, '住所' %>
-      <%= f.search_field :address_cont %>
-      <%= f.submit '検索' %>
-    <% end %><hr>
-    </div>
-    <% @posts.each do |post| %>
-    <div class="post-username">
-    <%= link_to post.user.username, user_path(post.user.id), data: {"turbolinks" => false}, class:'post-user' %>
-    </div>
-    <div class="post-body">
-      <%= link_to post, data: {"turbolinks" => false} do %>
-      <p class="underline"><%= post.title %></p>
-      <% end %><br>
-      <div class="post-body-container">
-      <%= post.menu %><br>
-      コメント<%= post.comments.count %>件<br>
-      <%= render 'posts/tag_list', tag_list: post.tag_list %>
+  <div class="container">
+    <div class="posts-item-box">
+      <div class="search">
+      <%= search_form_for @q, url: search_posts_path do |f| %>
+        <%= f.label :address_cont, '住所' %>
+        <%= f.search_field :address_cont %>
+        <%= f.submit '検索' %>
+      <% end %>
+      </div><hr>
+      <% @posts.each do |post| %>
+      <div class="post-username">
+        <%= link_to post.user.username, user_path(post.user.id), data: {"turbolinks" => false}, class:'post-user' %>
       </div>
+      <div class="post-body">
+        <%= link_to post, data: {"turbolinks" => false} do %>
+          <p class="underline"><%= post.title %></p>
+        <% end %><br>
+        <div class="post-body-container">
+          <%= post.menu %><br>
+          コメント<%= post.comments.count %>件<br>
+          <%= render 'posts/tag_list', tag_list: post.tag_list %>
+        </div>
+      </div>
+      <% end %>
     </div>
-    <% end %>
+    <%= paginate @posts %>
   </div>
-  <%= paginate @posts %>
- </div>
 </div>
