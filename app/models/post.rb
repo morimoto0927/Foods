@@ -5,8 +5,9 @@ class Post < ApplicationRecord
   has_many :favorites, dependent: :destroy
   attachment :image
   validates :user_id, presence: true
-  validates :title, presence: true
-  validates :body, presence: true
-  validates :menu, presence: true
-  validates :address, presence: true
+  validates :title, presence: true, length: { maximum: 50 }
+  validates :body, presence: true, length: { maximum: 1000 }
+  validates :menu, presence: true, length: { maximum: 50 }
+  validates :address, presence: true, length: { maximum: 50 }
+  validates :price, length: { maximum: 50 }
 end
