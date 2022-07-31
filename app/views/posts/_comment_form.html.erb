@@ -1,3 +1,4 @@
+<%= render '/layouts/flash_messages' %>
 <% if @post.user_id != current_user.id %>
   <%= form_with model: [@post, @comment] do |f| %>
     <%= f.text_area :comment %>
