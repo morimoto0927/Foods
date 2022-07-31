@@ -29,7 +29,7 @@
       <ul class="navbar-nav">
         <li class="nav-item active">
           <% if current_user.try(:admin?) %>
-            <%= link_to '管理者ログイン', rails_admin_path, data: {"turbolinks" => false}, class:"no-underline" %>
+            <%= link_to "管理者ログイン", rails_admin_path, data: {"turbolinks" => false}, class:"no-underline" %>
           <% end %>
           <li class="nav-item">
             <% if user_signed_in? %>
@@ -46,7 +46,7 @@
             <%= link_to "新規投稿", new_post_path, data: {"turbolinks" => false}, class: "no-underline" %>
           </li>
           <li class="nav-item">
-            <%= link_to '投稿一覧', posts_path, data: {"turbolinks" => false}, class: "no-underline" %>
+            <%= link_to "投稿一覧", posts_path, data: {"turbolinks" => false}, class: "no-underline" %>
           </li>
           <% end %>
         </li>

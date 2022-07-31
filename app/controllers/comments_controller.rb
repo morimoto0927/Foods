@@ -4,12 +4,12 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
-      redirect_to post_path(@post)
-    elsif
-      redirect_to post_path(@post), alert: 'コメントを入力してください'
+    elsif @comment.comment.empty?
+      flash[:alert] = 'コメントを入力してください'
     else
-      redirect_to post_path(@post), alert: ''
+      flash[:alert] = '500文字以内で入力してください'
     end
+    redirect_to post_path(@post)
   end
 
   def destroy
