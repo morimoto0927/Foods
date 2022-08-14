@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, authentication_keys: [:login]
   validates :username, presence: true, uniqueness: {case_sensitive: false}
-  validate :validate_username
   has_many :posts, dependent: :destroy
   has_many :following_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
   has_many :followings, through: :following_relationships
@@ -13,13 +12,6 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
   attr_writer :login
-  
-  
-  def validate_username
-    if User.where(email: username).exists?
-      errors.add(:username, :invalid)
-    end
-  end
 
   def login
     @login || self.username || self.email
