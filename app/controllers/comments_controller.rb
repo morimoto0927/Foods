@@ -4,9 +4,10 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
-    elsif @comment.comment.empty?
+      flash[:alert] = 'コメントを投稿しました'
+    elsif @comment.comment.blank?
       flash[:alert] = 'コメントを入力してください'
-    else
+    elsif @comment.comment * 501
       flash[:alert] = '500文字以内で入力してください'
     end
     redirect_to post_path(@post)
@@ -20,7 +21,7 @@ class CommentsController < ApplicationController
   end
 
   private
-  def comment_params
-    params.require(:comment).permit(:comment)
-  end
+    def comment_params
+      params.require(:comment).permit(:comment)
+    end
 end
