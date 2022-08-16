@@ -1,10 +1,10 @@
 <% if current_user.favorited?(@post) %>
-    <%= link_to post_favorite_path(@post), method: :delete do %>
+  <%= link_to post_favorite_path(@post), method: :delete do %>
     <span class="fas fa-thumbs-up like-btn-unlike"></span>
-    <% end %>
-  <% else %>
-    <%= link_to post_favorites_path(@post), method: :post do %>
+  <% end %>
+<% else %>
+  <%= link_to post_favorites_path(@post), method: :post do %>
     <span class="far fa-thumbs-up like-btn">
-    <% end %>
+  <% end %>
 <% end %>
 <%= @post.favorites.count %>    
