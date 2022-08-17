@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
-      flash[:alert] = 'コメントを投稿しました'
+      flash[:notice] = 'コメントを投稿しました'
     elsif @comment.comment.blank?
       flash[:alert] = 'コメントを入力してください'
     elsif @comment.comment * 501

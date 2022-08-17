@@ -8,7 +8,6 @@ class PostsController < ApplicationController
 
   def show
     @user = User.find_by(id: @post.user_id)
-    @posts = Post.all
     @comments = @post.comments.includes(:user).all
     @comment = @post.comments.build(user_id: current_user.id) if current_user
   end
@@ -23,7 +22,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path, notice: "投稿しました"
     else
-      redirect_to new_post_path, alert: "入力必須項目が抜けています。"
+      flash.now[:alert] = "入力必須項目が抜けています。"
+      render :new
     end
   end
 
@@ -31,9 +31,10 @@ class PostsController < ApplicationController
     
   def update
     if @post.update(post_params)
-      redirect_to post_path(@post)
+      redirect_to post_path(@post), notice: '投稿内容を変更しました'
     else 
-      render :new
+      flash.now[:alert] = '投稿内容を変更できませんでした'
+      render :edit
     end
   end
 
@@ -47,15 +48,15 @@ class PostsController < ApplicationController
   end
 
   private
-  def post_params
-    params.require(:post).permit(:title, :menu, :price, :address, :body, :image, :tag_list)
-  end
+    def post_params
+      params.require(:post).permit(:title, :menu, :price, :address, :body, :image, :tag_list)
+    end
 
-  def set_q
-    @q = Post.ransack(params[:q])
-  end
+    def set_q
+      @q = Post.ransack(params[:q])
+    end
 
-  def find_post
-    @post = Post.find(params[:id])
-  end
+    def find_post
+      @post = Post.find(params[:id])
+    end
 end
