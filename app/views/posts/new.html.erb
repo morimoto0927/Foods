@@ -1,4 +1,6 @@
-<%= render '/layouts/flash_messages' %>
+<div class='flash_message'>
+  <%= render '/layouts/flash_messages' %>
+</div>
 <%= form_with model: @post, local: true do |f| %>
   <div class="post-new">
     <table class="contact-table">
