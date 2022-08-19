@@ -1,7 +1,0 @@
-<h1>ユーザー検索</h1>
-<%= search_form_for @q, url: search_users_path do |f| %>
-  <%= f.label :username_cont, 'ユーザー名' %>
-  <%= f.search_field :username_cont %>
-  <br>
-  <%= f.submit '検索' %>
-<% end %>
