@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_q, only: [:index, :search]
   before_action :set_user, only: [:followings_user, :followers_user, :show, :favorites]
-  def index
-    @users = User.all
-  end
+
+  def index; end
 
   def show
     @posts = @user.posts.page(params[:page]).per(10).order('updated_at DESC')
@@ -20,12 +19,11 @@ class UsersController < ApplicationController
   end
 
   private
-    
-  def set_q
-    @q = User.ransack(params[:q])
-  end
+    def set_q
+      @q = User.ransack(params[:q])
+    end
 
-  def set_user
-    @user = User.find(params[:id])
-  end
+    def set_user
+      @user = User.find(params[:id])
+    end
 end
