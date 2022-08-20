@@ -28,6 +28,7 @@ RSpec.describe Comment, type: :model do
     end
 
     it 'コメントが500文字であるなら有効であること' do
+      @comment.comment = 'a' * 500
       expect(@comment).to be_valid
     end
   end 
