@@ -32,3 +32,7 @@ production:
   #username: root
   #password: <%= ENV['DATABASE_PASSWORD'] %>
   #socket: /var/lib/mysql/mysql.sock
+  database: Foods_production
+  username: root
+  password: <%= ENV['au19950927'] %>
+  socket: /var/lib/mysql/mysql.sock
