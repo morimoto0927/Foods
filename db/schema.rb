@@ -12,9 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2022_06_11_023012) do
 
-  create_table "comments", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "post_id", null: false
+  create_table "comments", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "post_id", null: false
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -22,20 +22,20 @@ ActiveRecord::Schema.define(version: 2022_06_11_023012) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "post_id"
+  create_table "favorites", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "post_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["post_id"], name: "index_favorites_on_post_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", charset: "utf8mb3", force: :cascade do |t|
     t.string "title"
     t.string "address"
     t.text "body"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2022_06_11_023012) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "relationships", force: :cascade do |t|
+  create_table "relationships", charset: "utf8mb3", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "following_id"
     t.datetime "created_at", precision: 6, null: false
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2022_06_11_023012) do
     t.index ["following_id"], name: "index_relationships_on_following_id"
   end
 
-  create_table "taggings", force: :cascade do |t|
+  create_table "taggings", id: :integer, charset: "utf8mb3", force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
     t.integer "taggable_id"
@@ -76,15 +76,15 @@ ActiveRecord::Schema.define(version: 2022_06_11_023012) do
     t.index ["tenant"], name: "index_taggings_on_tenant"
   end
 
-  create_table "tags", force: :cascade do |t|
-    t.string "name"
+  create_table "tags", id: :integer, charset: "utf8mb3", force: :cascade do |t|
+    t.string "name", collation: "utf8mb3_bin"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -101,5 +101,4 @@ ActiveRecord::Schema.define(version: 2022_06_11_023012) do
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "posts", "users"
-  add_foreign_key "taggings", "tags"
 end
