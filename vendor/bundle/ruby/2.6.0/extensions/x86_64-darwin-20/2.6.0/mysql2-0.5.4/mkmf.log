@@ -132,7 +132,7 @@ checked program was:
 "clang -o conftest -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0/x86_64-darwin20 -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0/ruby/backward -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0 -I. -I/Users/morimotokouki/.rbenv/versions/2.6.8/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe conftest.c  -L. -L/Users/morimotokouki/.rbenv/versions/2.6.8/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/openssl@3/lib     -lruby.2.6   "
 Undefined symbols for architecture x86_64:
   "_rb_enc_interned_str", referenced from:
-      _t in conftest-2711a2.o
+      _t in conftest-b1c8a9.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -288,7 +288,7 @@ conftest.c:6:35: error: no member named 'pvio' in 'struct st_net'; did you mean 
 int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
                                   ^~~~
                                   vio
-/usr/local/opt/mysql@5.7/include/mysql/mysql_com.h:345:8: note: 'vio' declared here
+/usr/local/opt/mysql@5.7/include/mysql/mysql_com.h:346:8: note: 'vio' declared here
   Vio *vio;
        ^
 1 error generated.
