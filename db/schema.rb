@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 2022_06_11_023012) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "taggings_count", default: 0
-    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
