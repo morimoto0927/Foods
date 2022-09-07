@@ -2,8 +2,8 @@ rails_root = File.expand_path('../../', __FILE__)
 ENV['BUNDLE_GEMFILE'] = rails_root + "/Gemfile"
 worker_processes 2
 timeout 30
-stderr_path File.expand_path('../../log/unicorn_stderr.log', __FILE__)
-stdout_path File.expand_path('../../log/unicorn_stdout.log', __FILE__)
+stderr_path "#{root_path}/log/unicorn.stderr.log"
+stdout_path "#{root_path}/log/unicorn.stdout.log"
 listen 8080
 pid File.expand_path('../../tmp/pids/unicorn.pid', __FILE__)
 preload_app true
