@@ -6,7 +6,7 @@ pid "#{root_path}/tmp/pids/unicorn.pid"
 timeout 30
 stderr_path "#{root_path}/log/unicorn.stderr.log"
 stdout_path "#{root_path}/log/unicorn.stdout.log"
-listen 8080
+listen 8080 
 pid File.expand_path('../../tmp/pids/unicorn.pid', __FILE__)
 preload_app true
 GC.respond_to?(:copy_on_write_friendly=) && GC.copy_on_write_friendly = true
