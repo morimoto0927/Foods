@@ -19,7 +19,7 @@ gem "refile-mini_magick"
 gem 'kaminari'
 gem 'ransack'
 gem 'bootstrap', '~> 4.1.1'
-#gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bootsnap', '>= 1.4.4', require: false
 gem 'acts-as-taggable-on', '~> 8.0'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'devise-i18n'
