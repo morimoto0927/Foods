@@ -9,11 +9,10 @@ default: &default
   #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   #timeout: 5000
   adapter: mysql2
-  database: 
   username: root
-  password: 
-  host: 127.0.0.1
+  password: <%= ENV["PASSWORD"] %>
   encoding: utf8
+
 
 development:
   <<: *default
@@ -22,8 +21,8 @@ development:
   adapter: mysql2
   encoding: utf8
   database: Foods_development
-  username: root
-  password: 
+  
+ 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -35,8 +34,7 @@ test:
   adapter: mysql2
   encoding: utf8
   database: Foods_test
-  username: root
-  password: 'au19950927'
+  
 
 production:
   <<: *default
@@ -46,5 +44,5 @@ production:
   #socket: /var/lib/mysql/mysql.sock
   database: Foods_production
   username: root
-  password: 'au19950927'
+  password:  <%= ENV["PASSWORD"] %>
   socket: /var/lib/mysql/mysql.sock

@@ -1,0 +1,1 @@
+export PASSWORD='au19950927'

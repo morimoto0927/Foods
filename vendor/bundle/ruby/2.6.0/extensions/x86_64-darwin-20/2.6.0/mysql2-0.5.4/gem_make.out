@@ -1,12 +1,12 @@
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.4/ext/mysql2
-/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220904-89713-fdokr0.rb extconf.rb --with-ldflags\=-L/usr/local/opt/openssl/lib
+/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220913-10462-1q3gjz2.rb extconf.rb --with-ldflags\=-L/usr/local/opt/openssl/lib
 /usr/local/bin/brew
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
 checking for rb_enc_interned_str() in ruby.h... no
 -----
-Using mysql_config at /usr/local/opt/mysql@5.7/bin/mysql_config
+Using mysql_config at /usr/local/bin/mysql_config
 -----
 checking for mysql.h... yes
 checking for errmsg.h... yes
@@ -24,9 +24,9 @@ checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... yes
 checking for SERVER_QUERY_WAS_SLOW in mysql.h... yes
 checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... yes
 checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... yes
-checking for my_bool in mysql.h... yes
+checking for my_bool in mysql.h... no
 -----
-Setting rpath to /usr/local/opt/mysql@5.7/lib
+Setting rpath to /usr/local/Cellar/mysql/8.0.30_1/lib
 -----
 creating Makefile
 
@@ -3534,7 +3534,9 @@ statement.c:611:26: note: ')' token is here
                                                        ^
 34 warnings generated.
 linking shared-object mysql2/mysql2.bundle
+ld: warning: directory not found for option '-L/usr/local/opt/openssl/lib'
+ld: warning: directory not found for option '-L/usr/local/opt/openssl@3/lib'
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.4/ext/mysql2
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20220904-89713-ibhhla/mysql2
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20220913-10462-1r3u883/mysql2
