@@ -1,5 +1,5 @@
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/unicorn-5.4.1/ext/unicorn_http
-/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220901-60110-j3h3sp.rb extconf.rb
+/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220913-10462-1hsxwzf.rb extconf.rb
 checking for SIZEOF_OFF_T in ruby.h... yes
 checking for SIZEOF_SIZE_T in ruby.h... yes
 checking for SIZEOF_LONG in ruby.h... yes
@@ -56,4 +56,4 @@ linking shared-object unicorn_http.bundle
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/unicorn-5.4.1/ext/unicorn_http
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 unicorn_http.bundle ./.gem.20220901-60110-yfn0pz
+/usr/bin/install -c -m 0755 unicorn_http.bundle ./.gem.20220913-10462-1jtlzmx

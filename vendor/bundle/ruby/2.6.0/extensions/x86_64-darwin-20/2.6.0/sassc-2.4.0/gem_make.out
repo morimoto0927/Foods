@@ -1,5 +1,5 @@
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
-/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220901-60110-a9rhuj.rb extconf.rb
+/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220913-10462-o83rlc.rb extconf.rb
 creating Makefile
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.bundle
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20220901-60110-adrgol/sassc
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20220913-10462-3zqm3c/sassc

@@ -1,5 +1,5 @@
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/racc-1.6.0/ext/racc/cparse
-/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220901-60110-1pl36oj.rb extconf.rb
+/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220913-10462-y8kevu.rb extconf.rb
 checking for rb_block_call()... yes
 checking for rb_ary_subseq()... yes
 creating Makefile
@@ -14,4 +14,4 @@ linking shared-object racc/cparse.bundle
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/racc-1.6.0/ext/racc/cparse
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20220901-60110-1ro4q91/racc
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20220913-10462-jjm2d9/racc

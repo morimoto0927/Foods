@@ -1,5 +1,5 @@
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/raindrops-0.20.0/ext/raindrops
-/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220901-60110-1rrqlan.rb extconf.rb
+/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220913-10462-1ttc0i0.rb extconf.rb
 checking for mmap() in sys/mman.h... yes
 checking for munmap() in sys/mman.h... yes
 checking for mremap() in sys/mman.h... no
@@ -144,4 +144,4 @@ linking shared-object raindrops_ext.bundle
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/raindrops-0.20.0/ext/raindrops
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 raindrops_ext.bundle ./.gem.20220901-60110-uxuzkq
+/usr/bin/install -c -m 0755 raindrops_ext.bundle ./.gem.20220913-10462-1tfozi6

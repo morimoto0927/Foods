@@ -1,5 +1,5 @@
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/kgio-2.11.4/ext/kgio
-/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220901-60110-d5r6h1.rb extconf.rb
+/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220913-10462-1c72udx.rb extconf.rb
 checking for CLOCK_MONOTONIC in time.h... yes
 checking for clockid_t in time.h... yes
 checking for clock_gettime() in -lrt... no
@@ -1204,4 +1204,4 @@ linking shared-object kgio_ext.bundle
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/kgio-2.11.4/ext/kgio
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 kgio_ext.bundle ./.gem.20220901-60110-1xskr1k
+/usr/bin/install -c -m 0755 kgio_ext.bundle ./.gem.20220913-10462-menbsh

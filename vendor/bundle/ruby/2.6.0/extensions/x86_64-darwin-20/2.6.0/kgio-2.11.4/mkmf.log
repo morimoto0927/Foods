@@ -328,7 +328,7 @@ checked program was:
 "clang -o conftest -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0/x86_64-darwin20 -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0/ruby/backward -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0 -I. -I/Users/morimotokouki/.rbenv/versions/2.6.8/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -D_GNU_SOURCE -DPOSIX_C_SOURCE=1-D_POSIX_C_SOURCE=200112L -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe conftest.c  -L. -L/Users/morimotokouki/.rbenv/versions/2.6.8/lib -L. -L/Users/morimotokouki/.rbenv/versions/2.6.8/lib  -fstack-protector-strong -L/usr/local/lib     -lruby.2.6   "
 Undefined symbols for architecture x86_64:
   "_accept4", referenced from:
-      _t in conftest-a17da4.o
+      _t in conftest-6a8e37.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -787,7 +787,7 @@ checked program was:
 "clang -o conftest -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0/x86_64-darwin20 -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0/ruby/backward -I/Users/morimotokouki/.rbenv/versions/2.6.8/include/ruby-2.6.0 -I. -I/Users/morimotokouki/.rbenv/versions/2.6.8/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -D_GNU_SOURCE -DPOSIX_C_SOURCE=1-D_POSIX_C_SOURCE=200112L -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe conftest.c  -L. -L/Users/morimotokouki/.rbenv/versions/2.6.8/lib -L. -L/Users/morimotokouki/.rbenv/versions/2.6.8/lib  -fstack-protector-strong -L/usr/local/lib     -lruby.2.6   "
 Undefined symbols for architecture x86_64:
   "_rb_thread_blocking_region", referenced from:
-      _t in conftest-df8788.o
+      _t in conftest-220759.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:

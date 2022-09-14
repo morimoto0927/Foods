@@ -1,5 +1,5 @@
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.13.0/ext/bootsnap
-/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220910-52957-kvgpqu.rb extconf.rb
+/Users/morimotokouki/.rbenv/versions/2.6.8/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.6.8/lib/ruby/2.6.0 -r ./siteconf20220913-10462-1pabkmv.rb extconf.rb
 creating Makefile
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.13.0/ext/bootsnap
@@ -367,4 +367,4 @@ linking shared-object bootsnap/bootsnap.bundle
 
 current directory: /Users/morimotokouki/Foods/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.13.0/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20220910-52957-lwr964/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20220913-10462-19wyl1r/bootsnap
