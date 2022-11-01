@@ -11,7 +11,7 @@ default: &default
   adapter: mysql2
   username: root
   password: <%= ENV["PASSWORD"] %>
-  encoding: utf8
+  encoding: utf8mb4
 
 
 development:
@@ -43,6 +43,11 @@ production:
   #password: <%= ENV['DATABASE_PASSWORD'] %>
   #socket: /var/lib/mysql/mysql.sock
   database: Foods_production
-  username: root
-  password:  <%= ENV["PASSWORD"] %>
-  socket: /var/lib/mysql/mysql.sock
+  adapter: mysql2
+  encoding: utf8mb4
+  charset: utf8mb4
+  username: <%= Rails.application.credentials.db[:user_name] %>
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:endpoint] %>
+  pool: 20
+  timeout: 1000
