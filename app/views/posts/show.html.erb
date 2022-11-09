@@ -32,8 +32,8 @@
       <tr>
       <th class=contact-item>写真</th>
       <td class="contact-body">
-      <% if @post.image_id.present? %>
-        <%= image_tag attachment_url(@post, :image, :fill, 350, 250, format: "jpeg") %>
+      <% if @post.post_image_id.present? %>
+        <%= image_tag attachment_url(@post, :post_image, :fill, 350, 250, format: "jpeg") %>
       <% end %>
       </td>
       </tr>
