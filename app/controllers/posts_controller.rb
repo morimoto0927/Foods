@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     @user = User.find_by(id: @post.user_id)
     @comments = @post.comments.includes(:user).all
     @comment = @post.comments.build(user_id: current_user.id) if current_user
+    p @post.post_image_id
   end
 
   def new 
@@ -49,7 +50,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :menu, :price, :address, :body, :image, :tag_list)
+      params.require(:post).permit(:title, :menu, :price, :address, :body, :post_image, :tag_list)
     end
 
     def set_q
