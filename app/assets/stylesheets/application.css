@@ -568,4 +568,9 @@
     margin: auto;
     font-size: 25px;
   }
+
+  .user_flash_message {
+    text-align: center;
+    padding-top: 15px;
+  }
  
