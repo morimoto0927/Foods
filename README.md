@@ -1,24 +1,31 @@
-# README
+#拉麺通信
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ラーメン屋のレビューや情報を投稿するアプリです。転職活動に使用するポートフォリオとして作成として作成しました。
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+#使用技術
+・ Ruby 2.7.6
+・ Rails 6.1.7
+・ Mysql 5.5.68
+・　SASS, Bootstrap
+・Github
+・RSpec
+・Puma
+・Nginx
+・AWS
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#機能一覧
+・ユーザー登録機能
+・ログイン機能
+・管理ユーザー機能
+・コメント機能
+・フォロー機能
+・いいね機能
+・タグ付け機能
+・投稿一覧表示機能
+・投稿機能
+・投稿検索機能
+・画像アップロード機能
+・ページネーション機能
+・レスポンシブデザイン(スマホサイズに対応)
