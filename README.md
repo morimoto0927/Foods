@@ -4,7 +4,7 @@
 
 # 本番環境
 
-https://rara-men-tushin.com/
+https://ra-men-tushin.com/
 
 
 # 使用技術
