@@ -16,7 +16,11 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
 #port ENV.fetch("PORT") { 3000 }
+require 'puma/daemon'
 bind "unix:///var/www/Foods/tmp/sockets/puma.sock"
+workers 3
+threads 2,3
+daemonize
 # Specifies the `environment` that Puma will run in.
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
