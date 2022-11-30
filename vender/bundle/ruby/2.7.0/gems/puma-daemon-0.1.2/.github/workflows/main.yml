@@ -1,0 +1,26 @@
+name: Ruby
+
+on: [push,pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: [3.0.0, 2.7.2, 2.6.6, 2.5.7]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby ${{ matrix.ruby-version }}
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+    - name: Install dependencies
+      run: bundle install
+    - name: Run RSpecs
+      run: bundle exec rspec --color
+    - name: Run Rubocop
+      run: bundle exec rubocop
+    - name: Upload Code Coverage
+      run: bash <(curl -s https://codecov.io/bash)
+

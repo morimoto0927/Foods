@@ -1,0 +1,16 @@
+current directory: /Users/morimotokouki/Foods-1/vender/bundle/ruby/2.7.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+/Users/morimotokouki/.rbenv/versions/2.7.6/bin/ruby -I /Users/morimotokouki/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20221130-13909-1rh705b.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/morimotokouki/Foods-1/vender/bundle/ruby/2.7.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make "DESTDIR=" clean
+
+current directory: /Users/morimotokouki/Foods-1/vender/bundle/ruby/2.7.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make "DESTDIR="
+compiling unf.cc
+linking shared-object unf_ext.bundle
+
+current directory: /Users/morimotokouki/Foods-1/vender/bundle/ruby/2.7.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20221130-13909-vqn5t4
