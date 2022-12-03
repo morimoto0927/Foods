@@ -77,15 +77,31 @@
   @media screen and (max-width: 480px) {
     /* 480px以下に適用されるCSS（スマホ用） */
     .top-container p {
-      font-size: 28px;
+      font-size: 20px;
     }
 
     .top-container h1 {
-      font-size: 45px;
+      font-size: 30px;
     }
 
     .top-container .btn {
       font-size: 20px;
+    }
+
+    .container h1 .display-5.primary {
+      font-size: 25px;
+    }
+
+    .container p {
+      font-size: 12px;
+    }
+
+    .container h2 {
+      font-size: 1rem;
+    }
+
+    .container li {
+      font-size: 13px;
     }
   }
   
