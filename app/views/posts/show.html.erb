@@ -41,7 +41,7 @@
       <tr>
       <th class=contact-item>レビュー</th>
       <td class="contact-body">
-        <%= @post.body %>
+        <%= safe_join(@post.body.split("\n"),tag(:br)) %>
       </td>
       </tr>
     </table>
