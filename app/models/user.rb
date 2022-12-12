@@ -13,6 +13,14 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   attr_writer :login
 
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.username = 'ゲスト'
+      user.confirmed_at = Time.now
+    end
+  end
+
   def login
     @login || self.username || self.email
   end
